@@ -1,10 +1,24 @@
 // src/sections/Home.tsx
 import React from "react";
+import { motion } from "framer-motion";
+
+// Variantes de animación
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 
 export default function Home() {
   return (
     <div>
-      <section className="flex flex-col items-center justify-center text-center py-24 rounded-2xl bg-gradient-to-b from-blue-900 via-blue-800 to-cyan-800 text-white shadow-lg">
+      {/* SECCIÓN PRINCIPAL */}
+      <motion.section
+        id="inicio"
+        className="flex flex-col items-center justify-center text-center py-24 rounded-2xl bg-gradient-to-b from-blue-900 via-blue-800 to-cyan-800 text-white shadow-lg"
+        initial="hidden"
+        animate="visible"
+        variants={fadeUp}
+      >
         <h1 className="text-5xl font-extrabold mb-4 drop-shadow-sm">Axioma</h1>
         <p className="text-lg mb-8 max-w-2xl">
           Innovación y precisión en sistemas de monitoreo acústico marino 🌊
@@ -17,21 +31,64 @@ export default function Home() {
         >
           <span className="relative z-10">Explorar tecnología</span>
         </a>
-      </section>
+      </motion.section>
 
+      {/* TARJETAS DE TECNOLOGÍA */}
       <section className="mt-12 grid gap-6 md:grid-cols-3">
         {[
-          { title: "Captura", text: "Sensores acústicos de alta fidelidad para entornos marinos." },
-          { title: "Procesamiento", text: "Modelos de IA para detección, clasificación y alertas." },
-          { title: "Análisis", text: "Paneles de visualización y reportes de tendencias en tiempo real." },
-        ].map((card) => (
-          <div
+          {
+            title: "Captura",
+            text: "Sensores acústicos de alta fidelidad para entornos marinos.",
+          },
+          {
+            title: "Procesamiento",
+            text: "Modelos de IA para detección, clasificación y alertas.",
+          },
+          {
+            title: "Análisis",
+            text: "Paneles de visualización y reportes de tendencias en tiempo real.",
+          },
+        ].map((card, i) => (
+          <motion.div
             key={card.title}
             className="rounded-xl bg-slate-900/60 border border-slate-700 p-6 hover:border-cyan-400/60 hover:shadow-lg transition"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: i * 0.15, ease: "easeOut" }}
+            viewport={{ once: true }}
           >
             <h3 className="text-cyan-300 font-semibold mb-2">{card.title}</h3>
             <p className="text-slate-300">{card.text}</p>
-          </div>
+          </motion.div>
+        ))}
+      </section>
+
+      {/* SECCIÓN DE IMÁGENES / ENLACES */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-20 bg-gradient-to-b from-blue-950 to-cyan-900 mt-16 rounded-2xl shadow-xl">
+        {[
+          { id: "empresa", title: "Empresa", img: "/Empresa.jpg" },
+          { id: "componentes", title: "Componentes", img: "/Componentes.jpg" },
+          { id: "contacto", title: "Contacto", img: "/Contacto.jpg" },
+        ].map((item, i) => (
+          <motion.a
+            key={item.id}
+            href={`#${item.id}`}
+            className="relative h-64 rounded-2xl overflow-hidden group shadow-lg transition-transform duration-500 hover:scale-105"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: i * 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <img
+              src={item.img}
+              alt={item.title}
+              className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent group-hover:from-cyan-700/50 transition-all duration-500"></div>
+            <h2 className="absolute bottom-6 left-6 text-3xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+              {item.title}
+            </h2>
+          </motion.a>
         ))}
       </section>
     </div>

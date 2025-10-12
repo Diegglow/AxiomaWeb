@@ -3,18 +3,19 @@ import React, { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import Home from "../sections/Home";
-import Empresa from "../sections/Empresa.tsx";
+import Empresa from "../sections/Empresa";
 import Componentes from "../sections/Componentes";
 import Contacto from "../sections/Contacto";
 
 type RouteKey = "inicio" | "empresa" | "componentes" | "contacto";
 
 const variants = {
-  initial: { opacity: 0, y: 16 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.28, ease: "easeOut" } },
-  exit: { opacity: 0, y: -12, transition: { duration: 0.22, ease: "easeIn" } },
+  initial: { opacity: 0, y: 24 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  exit: { opacity: 0, y: -24, transition: { duration: 0.35, ease: "easeIn" } },
 };
 
+// 🔹 Detecta la ruta actual según el hash (#)
 function getRouteFromHash(): RouteKey {
   const h = (typeof window !== "undefined" ? window.location.hash : "").replace("#", "");
   if (h === "empresa" || h === "componentes" || h === "contacto" || h === "inicio") return h;
@@ -24,12 +25,19 @@ function getRouteFromHash(): RouteKey {
 export default function AppRouter() {
   const [route, setRoute] = useState<RouteKey>(getRouteFromHash());
 
+  // 🔹 Escucha cambios en el hash (#empresa, #contacto, etc.)
   useEffect(() => {
-    const onHash = () => setRoute(getRouteFromHash());
+    const onHash = () => {
+      const newRoute = getRouteFromHash();
+      setRoute(newRoute);
+      // 🔹 Hace scroll suave al inicio cuando cambia de sección
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
+  // 🔹 Renderiza la sección correspondiente
   const View = useMemo(() => {
     switch (route) {
       case "empresa":
