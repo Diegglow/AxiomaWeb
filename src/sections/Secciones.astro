@@ -1,15 +1,14 @@
----
-/* src/sections/Secciones.astro */
----
-
-<section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-16 bg-gradient-to-b from-blue-950 to-cyan-900">
+<section 
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-8 py-16 bg-gradient-to-b from-blue-950 to-cyan-900"
+>
   <!-- EMPRESA -->
   <a href="#empresa" 
-     class="relative h-64 rounded-2xl overflow-hidden group shadow-lg transition-transform duration-500 hover:scale-105">
+     class="relative h-64 rounded-2xl overflow-hidden group shadow-lg transition-transform duration-500 hover:scale-[1.02] animate-fadeIn"
+  >
     <img src="/Empresa.jpg" 
          alt="Nuestra Empresa" 
          class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
-    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent group-hover:from-cyan-700/50 transition-all duration-500"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent group-hover:from-cyan-700/40 transition-all duration-500"></div>
     <h2 class="absolute bottom-6 left-6 text-3xl font-bold text-white group-hover:text-cyan-300 transition-colors">
       Empresa
     </h2>
@@ -17,25 +16,64 @@
 
   <!-- COMPONENTES -->
   <a href="#componentes" 
-     class="relative h-64 rounded-2xl overflow-hidden group shadow-lg transition-transform duration-500 hover:scale-105">
+     class="relative h-64 rounded-2xl overflow-hidden group shadow-lg transition-transform duration-500 hover:scale-[1.02] animate-fadeIn"
+  >
     <img src="/Componentes.jpg" 
          alt="Componentes Axioma" 
          class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
-    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent group-hover:from-cyan-700/50 transition-all duration-500"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent group-hover:from-cyan-700/40 transition-all duration-500"></div>
     <h2 class="absolute bottom-6 left-6 text-3xl font-bold text-white group-hover:text-cyan-300 transition-colors">
       Componentes
     </h2>
   </a>
 
+  <!-- APLICACIONES -->
+  <a href="#aplicaciones" 
+     class="relative h-64 rounded-2xl overflow-hidden group shadow-lg transition-transform duration-500 hover:scale-[1.02] animate-fadeIn"
+  >
+    <img src="/Aplicaciones.jpg" 
+         alt="Aplicaciones Axioma" 
+         class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent group-hover:from-cyan-700/40 transition-all duration-500"></div>
+    <h2 class="absolute bottom-6 left-6 text-3xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+      Aplicaciones
+    </h2>
+  </a>
+
   <!-- CONTACTO -->
   <a href="#contacto" 
-     class="relative h-64 rounded-2xl overflow-hidden group shadow-lg transition-transform duration-500 hover:scale-105">
+     class="relative h-64 rounded-2xl overflow-hidden group shadow-lg transition-transform duration-500 hover:scale-[1.02] animate-fadeIn"
+  >
     <img src="/Contacto.jpg" 
          alt="Contacto Axioma" 
          class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
-    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent group-hover:from-cyan-700/50 transition-all duration-500"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent group-hover:from-cyan-700/40 transition-all duration-500"></div>
     <h2 class="absolute bottom-6 left-6 text-3xl font-bold text-white group-hover:text-cyan-300 transition-colors">
       Contacto
     </h2>
   </a>
 </section>
+
+<style>
+  /* 💫 Animación de aparición suave */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.9s ease-out both;
+  }
+
+  /* Aparecen con retraso progresivo */
+  a:nth-child(1) { animation-delay: 0s; }
+  a:nth-child(2) { animation-delay: 0.15s; }
+  a:nth-child(3) { animation-delay: 0.3s; }
+  a:nth-child(4) { animation-delay: 0.45s; }
+</style>

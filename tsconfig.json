@@ -4,21 +4,19 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "jsxImportSource": "react",
     "allowJs": true,
     "strict": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "skipLibCheck": true,
     "baseUrl": ".",
+    "types": ["node", "astro/client"],
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": [
-    "src",
-    "astro.config.mjs",
-    "env.d.ts"
-  ],
+  "include": ["src", "astro.config.mjs", "env.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

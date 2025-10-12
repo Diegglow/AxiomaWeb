@@ -7,8 +7,8 @@ export default function Contacto() {
       <header className="rounded-xl bg-gradient-to-r from-slate-900 to-cyan-900 p-8 text-white">
         <h2 className="text-3xl font-bold">Contacto</h2>
         <p className="text-slate-200 mt-2 max-w-3xl">
-          ¿Tienes un proyecto o investigación? Conversemos cómo integrar
-          inteligencia acústica en tu operación.
+          ¿Tienes un proyecto o investigación? ¡Contactanos y conversemos cómo integrar
+          tu idea a un proyecto de inteligencia maritima!
         </p>
       </header>
 
