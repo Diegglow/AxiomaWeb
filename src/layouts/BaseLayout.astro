@@ -1,0 +1,44 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import SmoothScroll from "../islands/SmoothScroll.tsx";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Axioma</title>
+    <meta
+      name="description"
+      content="Axioma — Innovación y precisión en sistemas de monitoreo acústico marino"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      ::selection {
+        background: #22d3ee;
+        color: #0f172a;
+      }
+    </style>
+  </head>
+
+  <body class="bg-slate-950 text-slate-200 font-sans antialiased">
+    <Navbar />
+
+    <main id="app" class="min-h-screen">
+      <slot />
+    </main>
+
+    <Footer />
+
+    {/*
+      Esta isla maneja:
+      1. Scroll suave tipo easeInOutQuad
+      2. Highlight dinámico del link activo
+    */}
+    <SmoothScroll client:load />
+  </body>
+</html>

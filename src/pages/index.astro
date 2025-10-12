@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AppRouter from "../islands/AppRouter.tsx";
+import "../styles/global.css";
+---
+
+<BaseLayout>
+  {/*
+    React Island que controla la navegación por hash y
+    aplica transiciones suaves con Framer Motion.
+  */}
+  <AppRouter client:load />
+</BaseLayout>
