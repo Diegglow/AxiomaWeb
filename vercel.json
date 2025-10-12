@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "installCommand": "npm install",
+  "installCommand": "npm ci || npm install",
   "outputDirectory": "dist",
   "framework": "astro",
   "env": {
