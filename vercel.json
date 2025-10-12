@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npx astro build",
+  "installCommand": "npm install",
+  "outputDirectory": "dist",
+  "framework": "astro",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
