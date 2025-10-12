@@ -9,9 +9,11 @@ const links = [
 
 <header class="bg-gradient-to-r from-slate-900 via-slate-800 to-cyan-900 text-white">
   <nav class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
-    <a href="#inicio" class="text-cyan-300 font-bold text-xl hover:text-cyan-200 transition">
-      Axioma
-    </a>
+    <a href="/" class="flex items-center gap-3 group">
+  <img src="/Axioma_LOGO.png" alt="Axioma logo" class="h-10 w-auto transition-transform duration-300 group-hover:scale-110" />
+  <span class="font-bold text-cyan-400 text-2xl tracking-wide group-hover:text-cyan-300 transition-colors duration-300">Axioma</span>
+</a>
+
 
     <ul class="flex items-center gap-6 text-sm">
       {links.map(({ href, label }) => (
