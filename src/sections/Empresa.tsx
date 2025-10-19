@@ -3,41 +3,180 @@ import React from "react";
 
 export default function Empresa() {
   return (
-    <div className="space-y-8">
-      <header className="rounded-xl bg-gradient-to-r from-slate-900 to-cyan-900 p-8 text-white">
-        <h2 className="text-3xl font-bold">Sobre Axioma</h2>
-        <p className="text-slate-200 mt-2 max-w-3xl">
-          Hacemos del sonido el lenguaje que conecta la ciencia con el océano.
-          Diseñamos y fabricamos soluciones de computación acústica de precisión
-          para captura, procesamiento y análisis de datos subacuáticos en tiempo real.
-        </p>
+    <div className="space-y-20">
+      {/* ENCABEZADO */}
+      <header className="relative rounded-xl bg-gradient-to-r from-blue-950 via-blue-900 to-cyan-900 p-10 text-white shadow-lg overflow-hidden">
+        <img
+          src="/empresaHeader.png"
+          alt="Fondo empresa"
+          className="absolute inset-0 w-full h-full object-cover opacity-20"
+        />
+        <div className="relative z-10 max-w-4xl">
+          <h2
+            className="text-4xl font-extrabold text-cyan-300 mb-3"
+            style={{
+              fontFamily: "'Glacial Indifference', 'Nunito Sans', sans-serif",
+            }}
+          >
+            Agenda Sonar
+          </h2>
+          <p className="text-slate-200 leading-relaxed">
+            En Sonar impulsamos la transformación digital marina mediante el
+            desarrollo de soluciones de computación acústica que transforman los
+            ecos del océano en datos científicos de alta precisión. Nuestro
+            compromiso es contribuir al conocimiento, la preservación y el uso
+            sostenible de los recursos marinos a través de tecnología avanzada,
+            ciencia y colaboración.
+          </p>
+        </div>
       </header>
 
-      <div className="grid md:grid-cols-3 gap-6">
-        <div className="rounded-xl bg-slate-900/60 border border-slate-700 p-6">
-          <h3 className="text-cyan-300 font-semibold mb-2">Propósito</h3>
-          <p className="text-slate-300">
-            Hacer del sonido el lenguaje que nos conecta con el ecosistema global,
-            proveyendo la inteligencia que la ciencia y la industria necesitan para un futuro sostenible.
-          </p>
-        </div>
+      {/* OBJETIVOS */}
+      <section className="text-white">
+        <h3
+          className="text-3xl font-bold text-center text-cyan-300 mb-10"
+          style={{
+            fontFamily: "'Glacial Indifference', 'Nunito Sans', sans-serif",
+          }}
+        >
+          Objetivos Estrategicos
+        </h3>
 
-        <div className="rounded-xl bg-slate-900/60 border border-slate-700 p-6">
-          <h3 className="text-cyan-300 font-semibold mb-2">Misión</h3>
-          <p className="text-slate-300">
-            Desarrollamos y fabricamos soluciones de computación acústica de precisión
-            que permiten la captura, procesamiento y análisis de datos del entorno subacuático y ambiental.
-          </p>
-        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* 5 objetivos */}
+          {[
+            {
+              titulo: "1. Innovación Acústica",
+              texto:
+                "Liderar la investigación aplicada en tecnologías acústicas que mejoren la exploración y monitoreo marino.",
+            },
+            {
+              titulo: "2. Sustentabilidad",
+              texto:
+                "Fomentar la creación de herramientas tecnológicas que reduzcan el impacto ambiental y promuevan ecosistemas sostenibles.",
+            },
+            {
+              titulo: "3. Formación Científica",
+              texto:
+                "Vincular la ciencia con la industria marina, impulsando la capacitación de nuevos talentos en oceanografía computacional.",
+            },
+            {
+              titulo: "4. Colaboración Global",
+              texto:
+                "Establecer alianzas internacionales para compartir conocimiento y fortalecer la investigación marina.",
+            },
+            {
+              titulo: "5. Divulgación y Conciencia",
+              texto:
+                "Traducir los hallazgos científicos en información accesible para la sociedad, inspirando una cultura de respeto hacia el mar.",
+            },
+          ].map((obj, i) => (
+            <div
+              key={i}
+              className="rounded-xl bg-slate-900/70 border border-slate-700 p-6 text-center shadow-md hover:shadow-cyan-500/30 transition-all duration-300"
+            >
+              <h4 className="text-cyan-300 font-semibold text-lg mb-2">
+                {obj.titulo}
+              </h4>
+              <p className="text-slate-300 text-sm">{obj.texto}</p>
+            </div>
+          ))}
 
-        <div className="rounded-xl bg-slate-900/60 border border-slate-700 p-6">
-          <h3 className="text-cyan-300 font-semibold mb-2">Visión</h3>
-          <p className="text-slate-300">
-            Ser reconocidos globalmente como el referente de excelencia y el socio estratégico
-            en tecnologías acústicas para la investigación y preservación marina.
-          </p>
+          {/* 6to objetivo: imagen */}
+          <div className="rounded-xl overflow-hidden shadow-md border border-slate-700">
+            <img
+              src="/objetivoImagen.png"
+              alt="Colaboración Sonar"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* MISIÓN Y VISIÓN */}
+      <section className="bg-gradient-to-r from-blue-950 to-cyan-900 rounded-xl text-center text-white py-12 px-6 shadow-lg">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h3 className="text-2xl font-bold text-cyan-300 mb-3">Visión</h3>
+            <p className="text-slate-200">
+              Ser el referente global en innovación acústica aplicada a la
+              investigación marina, liderando la transformación digital de los
+              océanos mediante tecnología y sostenibilidad.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-cyan-300 mb-3">Misión</h3>
+            <p className="text-slate-200">
+              Desarrollar soluciones de cómputo acústico de alta precisión para
+              analizar y comprender los ecos del océano, aportando información
+              esencial para la ciencia y la conservación marina.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* EQUIPO */}
+      <section className="text-white">
+        <h3
+          className="text-3xl font-bold text-center text-cyan-300 mb-12"
+          style={{
+            fontFamily: "'Glacial Indifference', 'Nunito Sans', sans-serif",
+          }}
+        >
+          Nuestro Equipo
+        </h3>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-center items-start">
+          {[
+            {
+              nombre: "Yulemi Nicolai",
+              cargo: "Ingeniera en Análisis Acústico",
+              correo: "yulemi@sonar.mx",
+              img: "/yulemi.png",
+            },
+            {
+              nombre: "Génesis Ariza",
+              cargo: "Desarrolladora de Software Marino",
+              correo: "genesis@sonar.mx",
+              img: "/genesis.png",
+            },
+            {
+              nombre: "Diego Medina",
+              cargo: "Director de Innovación y Cómputo",
+              correo: "diego@sonar.mx",
+              img: "/diego.png",
+            },
+            {
+              nombre: "Fernanda Ojeda",
+              cargo: "Gestora de Proyectos Científicos",
+              correo: "fernanda@sonar.mx",
+              img: "/fernanda.png",
+            },
+            {
+              nombre: "Keren Villanueva",
+              cargo: "Especialista en Comunicación y Ciencia",
+              correo: "keren@sonar.mx",
+              img: "/keren.png",
+            },
+          ].map((persona, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center text-center bg-slate-900/60 border border-slate-700 rounded-xl p-6 shadow-md hover:shadow-cyan-400/30 transition-all duration-300"
+            >
+              <img
+                src={persona.img}
+                alt={persona.nombre}
+                className="w-28 h-28 rounded-full object-cover border-2 border-cyan-400 mb-4"
+              />
+              <h4 className="font-semibold text-cyan-300">
+                {persona.nombre}
+              </h4>
+              <p className="text-slate-300 text-sm">{persona.cargo}</p>
+              <p className="text-cyan-400 text-xs mt-1">{persona.correo}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

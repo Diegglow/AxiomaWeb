@@ -17,14 +17,14 @@ export default function Home() {
       {/* SECCIÓN PRINCIPAL */}
       <motion.section
         id="inicio"
-        className="flex flex-col items-center justify-center text-center py-24 rounded-2xl bg-gradient-to-b from-blue-900 via-blue-800 to-cyan-800 text-white shadow-lg"
+        className="flex flex-col items-center justify-center text-center py-16 rounded-2xl bg-gradient-to-b from-blue-900 via-blue-800 to-cyan-800 text-white shadow-lg"
         initial="hidden"
         animate="visible"
         variants={fadeUp}
       >
-        <h1 className="text-5xl font-extrabold mb-4 drop-shadow-sm">Axioma</h1>
-        <p className="text-lg mb-8 max-w-2xl">
-          Innovación y precisión en sistemas de monitoreo acústico marino 🌊
+        <h1 className="text-5xl font-extrabold mb-4 drop-shadow-sm">¿Escuchas el mar, o solo el ruido?</h1>
+        <p className="text-lg mb-6 max-w-6xl">
+          Cada ola tiene algo que contar...Con AXIOMA, transformamos el sonido del mar en datos que revelan su comportamiento. Nuestro equipo de cómputo analiza cada frecuencia, cada pulso y cada eco para comprender los fenómenos marinos con precisión científica. Porque escuchar no basta, hay que entender lo que el océano nos dice.  
         </p>
 
         <a
@@ -40,7 +40,7 @@ export default function Home() {
       <section className="mt-12 relative rounded-2xl overflow-hidden shadow-lg">
         {/* Imagen de fondo */}
         <img
-          src="/Fondo.jpg"
+          src="/PATRON SONAR.jpg"
           alt="Fondo marino tecnológico"
           className="absolute inset-0 w-full h-full object-cover opacity-80"
         />

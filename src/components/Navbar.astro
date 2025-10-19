@@ -8,29 +8,26 @@ const links = [
 ];
 ---
 
-<header class="sticky top-0 z-50 bg-gradient-to-r from-slate-900 via-slate-800 to-cyan-900 text-white shadow-md backdrop-blur-md">
-  <nav class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+<header class="bg-gradient-to-r from-white via-blue-500 to-blue-950 text-[#182046] shadow-md backdrop-blur-md">
+  <nav class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+    
     <!-- LOGO -->
-    <a href="#inicio" class="flex items-center gap-3 group">
+    <a href="#inicio" class="flex items-center gap-5 group ml-2">
       <img
-        src="/Axioma_LOGO.png"
-        alt="Axioma logo"
-        class="h-10 w-auto transition-transform duration-300 group-hover:scale-110"
+        src="/SonarColor.png"
+        alt="Sonar logo"
+        class="h-14 w-auto transition-transform duration-300 group-hover:scale-110"
       />
-      <span
-        class="font-bold text-cyan-400 text-2xl tracking-wide group-hover:text-cyan-300 transition-colors duration-300"
-      >
-        Axioma
-      </span>
-    </a>
+
 
     <!-- ENLACES -->
-    <ul class="hidden md:flex items-center gap-6 text-sm font-medium">
+    <ul class="flex items-center gap-8 text-[15px] font-semibold">
       {links.map(({ href, label }) => (
         <li>
           <a
             href={href}
-            class="text-slate-200 hover:text-cyan-300 transition-colors duration-200"
+            class="text-white hover:text-cyan-300 visited:text-white active:text-white focus:text-cyan-300 transition-colors duration-200"
+            style="font-family: 'Glacial Indifference', 'Nunito Sans', sans-serif;"
           >
             {label}
           </a>
@@ -42,7 +39,7 @@ const links = [
     <div class="md:hidden">
       <details class="relative">
         <summary class="list-none cursor-pointer flex items-center gap-2 select-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </summary>
