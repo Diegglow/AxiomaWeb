@@ -77,7 +77,7 @@ export default function Home() {
       {/* SECCIÓN DE IMÁGENES / ENLACES */}
 <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 px-8 py-20 bg-gradient-to-b from-blue-950 to-cyan-900 mt-16 rounded-2xl shadow-xl">
   {[
-    { id: "empresa", title: "Empresa", img: "/Empresa.jpg" },
+    { id: "empresa", title: "Empresa", img: "/Empresa.png" },
     { id: "componentes", title: "Componentes", img: "/Componentes.jpg" },
     { id: "aplicaciones", title: "Aplicaciones", img: "/Aplicaciones.jpg" },
     { id: "contacto", title: "Contacto", img: "/Contacto.jpg" },

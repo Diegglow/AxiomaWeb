@@ -7,7 +7,7 @@ export default function Empresa() {
       {/* ENCABEZADO */}
       <header className="relative rounded-xl bg-gradient-to-r from-blue-950 via-blue-900 to-cyan-900 p-10 text-white shadow-lg overflow-hidden">
         <img
-          src="/empresaHeader.png"
+          src="/PATRON SONAR.jpg"
           alt="Fondo empresa"
           className="absolute inset-0 w-full h-full object-cover opacity-20"
         />
@@ -132,31 +132,31 @@ export default function Empresa() {
               nombre: "Yulemi Nicolai",
               cargo: "Ingeniera en Análisis Acústico",
               correo: "yulemi@sonar.mx",
-              img: "/yulemi.png",
+              img: "/Yulemi.png",
             },
             {
               nombre: "Génesis Ariza",
               cargo: "Desarrolladora de Software Marino",
               correo: "genesis@sonar.mx",
-              img: "/genesis.png",
+              img: "/Genesis.png",
             },
             {
               nombre: "Diego Medina",
               cargo: "Director de Innovación y Cómputo",
               correo: "diego@sonar.mx",
-              img: "/diego.png",
+              img: "/Diego.png",
             },
             {
               nombre: "Fernanda Ojeda",
               cargo: "Gestora de Proyectos Científicos",
               correo: "fernanda@sonar.mx",
-              img: "/fernanda.png",
+              img: "/Fer.png",
             },
             {
               nombre: "Keren Villanueva",
               cargo: "Especialista en Comunicación y Ciencia",
               correo: "keren@sonar.mx",
-              img: "/keren.png",
+              img: "/Keren.jpeg",
             },
           ].map((persona, i) => (
             <div

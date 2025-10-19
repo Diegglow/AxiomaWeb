@@ -17,7 +17,7 @@ export default function Contacto() {
       {/* ENCABEZADO CON IMAGEN DE FONDO */}
       <header className="relative rounded-xl w-full max-w-4xl overflow-hidden bg-gradient-to-r from-slate-900 to-cyan-900 p-8 shadow-lg">
         <img
-          src="/ContactoRegistro.png"
+          src="/Keren.jpeg"
           alt="Decoración contacto"
           className="absolute inset-0 w-full h-full object-cover opacity-25"
         />
@@ -104,7 +104,7 @@ export default function Contacto() {
               className="bg-gradient-to-b from-blue-900 to-cyan-800 text-white px-10 py-8 rounded-2xl shadow-2xl text-center max-w-sm"
             >
               <h3 className="text-xl font-bold mb-2 text-cyan-300">
-                ✅ Tu respuesta se ha enviado satisfactoriamente
+                Tu respuesta se ha enviado satisfactoriamente, agradecemos tu interes
               </h3>
               <p className="text-sm text-slate-300">
                 Mantente atento a nuestra respuesta.
