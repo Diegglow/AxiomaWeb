@@ -1,4 +1,3 @@
-// src/sections/Empresa.tsx
 import React from "react";
 
 export default function Empresa() {
@@ -32,9 +31,9 @@ export default function Empresa() {
       </header>
 
       {/* OBJETIVOS */}
-      <section className="text-white">
+      <section className="text-white text-center">
         <h3
-          className="text-3xl font-bold text-center text-cyan-300 mb-10"
+          className="text-3xl font-bold text-cyan-300 mb-10"
           style={{
             fontFamily: "'Glacial Indifference', 'Nunito Sans', sans-serif",
           }}
@@ -42,8 +41,8 @@ export default function Empresa() {
           Objetivos Estrategicos
         </h3>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* 5 objetivos */}
+        {/* Objetivos */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
             {
               titulo: "1. Innovación Acústica",
@@ -73,7 +72,7 @@ export default function Empresa() {
           ].map((obj, i) => (
             <div
               key={i}
-              className="rounded-xl bg-slate-900/70 border border-slate-700 p-6 text-center shadow-md hover:shadow-cyan-500/30 transition-all duration-300"
+              className="rounded-xl bg-slate-900/70 border border-slate-700 p-6 shadow-md hover:shadow-cyan-500/30 transition-all duration-300"
             >
               <h4 className="text-cyan-300 font-semibold text-lg mb-2">
                 {obj.titulo}
@@ -81,15 +80,21 @@ export default function Empresa() {
               <p className="text-slate-300 text-sm">{obj.texto}</p>
             </div>
           ))}
+        </div>
 
-          {/* 6to objetivo: imagen */}
-          <div className="rounded-xl overflow-hidden shadow-md border border-slate-700">
-            <img
-              src="/objetivoImagen.png"
-              alt="Colaboración Sonar"
-              className="w-full h-full object-cover"
-            />
-          </div>
+        {/* Video */}
+        <div className="mt-12 flex justify-center">
+          <video
+            className="rounded-xl shadow-lg border border-slate-700 w-full max-w-4xl"
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
+          >
+            <source src="/SonarVid.mp4" type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
         </div>
       </section>
 
@@ -126,20 +131,9 @@ export default function Empresa() {
           Nuestro Equipo
         </h3>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-center items-start">
+        {/* Columnas */}
+        <div className="grid md:grid-cols-2 gap-10 justify-center items-start px-10">
           {[
-            {
-              nombre: "Yulemi Nicolai",
-              cargo: "Ingeniera en Análisis Acústico",
-              correo: "yulemi@sonar.mx",
-              img: "/Yulemi.png",
-            },
-            {
-              nombre: "Génesis Ariza",
-              cargo: "Desarrolladora de Software Marino",
-              correo: "genesis@sonar.mx",
-              img: "/Genesis.png",
-            },
             {
               nombre: "Diego Medina",
               cargo: "Director de Innovación y Cómputo",
@@ -153,26 +147,38 @@ export default function Empresa() {
               img: "/Fer.png",
             },
             {
+              nombre: "Yulemi Nicolai",
+              cargo: "Ingeniera en Análisis Acústico",
+              correo: "yulemi@sonar.mx",
+              img: "/Yulemi.png",
+            },
+            {
               nombre: "Keren Villanueva",
               cargo: "Especialista en Comunicación y Ciencia",
               correo: "keren@sonar.mx",
               img: "/Keren.jpeg",
             },
+            {
+              nombre: "Génesis Ariza",
+              cargo: "Desarrolladora de Software Marino",
+              correo: "genesis@sonar.mx",
+              img: "/Genesis.png",
+            },
           ].map((persona, i) => (
             <div
               key={i}
-              className="flex flex-col items-center text-center bg-slate-900/60 border border-slate-700 rounded-xl p-6 shadow-md hover:shadow-cyan-400/30 transition-all duration-300"
+              className="flex flex-col items-center text-center bg-slate-900/60 border border-slate-700 rounded-2xl p-8 shadow-md hover:shadow-cyan-400/30 transition-all duration-300 w-full max-w-lg mx-auto"
             >
               <img
                 src={persona.img}
                 alt={persona.nombre}
-                className="w-28 h-28 rounded-full object-cover border-2 border-cyan-400 mb-4"
+                className="w-64 h-64 rounded-full object-cover border-4 border-blue-800 mb-5"
               />
-              <h4 className="font-semibold text-cyan-300">
+              <h4 className="font-semibold text-cyan-500 text-xl">
                 {persona.nombre}
               </h4>
-              <p className="text-slate-300 text-sm">{persona.cargo}</p>
-              <p className="text-cyan-400 text-xs mt-1">{persona.correo}</p>
+              <p className="text-slate-300 text-sm mt-1">{persona.cargo}</p>
+              <p className="text-cyan-400 text-xs mt-2">{persona.correo}</p>
             </div>
           ))}
         </div>

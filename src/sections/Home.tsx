@@ -24,7 +24,7 @@ export default function Home() {
       >
         <h1 className="text-5xl font-extrabold mb-4 drop-shadow-sm">¿Escuchas el mar, o solo el ruido?</h1>
         <p className="text-lg mb-6 max-w-6xl">
-          Cada ola tiene algo que contar...Con AXIOMA, transformamos el sonido del mar en datos que revelan su comportamiento. Nuestro equipo de cómputo analiza cada frecuencia, cada pulso y cada eco para comprender los fenómenos marinos con precisión científica. Porque escuchar no basta, hay que entender lo que el océano nos dice.  
+          Cada ola tiene algo que contar...Con SONAR, transformamos el sonido del mar en datos que revelan su comportamiento. Nuestro equipo de cómputo analiza cada frecuencia, cada pulso y cada eco para comprender los fenómenos marinos con precisión científica. Porque escuchar no basta, hay que entender lo que el océano nos dice.  
         </p>
 
         <a
