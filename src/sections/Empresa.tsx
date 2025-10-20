@@ -92,7 +92,7 @@ export default function Empresa() {
             playsInline
             controls
           >
-            <source src="/SonarVid.mp4" type="video/mp4" />
+            <source src="/Sonar1.mp4" type="video/mp4" />
             Tu navegador no soporta videos HTML5.
           </video>
         </div>
