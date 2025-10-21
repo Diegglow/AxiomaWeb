@@ -42,7 +42,7 @@ export default function Componentes() {
         name: "HYDRONIX",
         tagline:
           "Nodo compacto para pre-procesamiento en campo e inferencia en borde",
-        img: "/HYDRONIX.jpg",
+        img: "/Hydronix2.jpg",
         price: "$425,700 MXN / USD: 23,130",
         components: [
           { title: "CPU", spec: "AMD Ryzen Threadripper PRO 5995WX — 64 núcleos / 128 hilos" },
