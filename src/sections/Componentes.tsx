@@ -19,7 +19,7 @@ export default function Componentes() {
         tagline:
           "Estación de trabajo extremo para entrenamiento, simulación y análisis acústico avanzado.",
         img: "/THALASSYS.jpg",
-        price: "$660,100 MXN / USD: 11,882",
+        price: "$660,100 MXN / USD: 35,865",
         components: [
           { title: "CPU", spec: "AMD Ryzen Threadripper PRO 7985WX — 64 núcleos / 128 hilos" },
           { title: "Motherboard", spec: "ASUS Pro WS WRX90E-SAGE SE" },
@@ -43,7 +43,7 @@ export default function Componentes() {
         tagline:
           "Nodo compacto para pre-procesamiento en campo e inferencia en borde",
         img: "/HYDRONIX.jpg",
-        price: "$425,700 MXN",
+        price: "$425,700 MXN / USD: 23,130",
         components: [
           { title: "CPU", spec: "AMD Ryzen Threadripper PRO 5995WX — 64 núcleos / 128 hilos" },
           { title: "Motherboard", spec: "ASUS Pro WS WRX80E-SAGE SE" },

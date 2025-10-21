@@ -115,7 +115,7 @@ export default function Empresa() {
             playsInline
             controls
           >
-            <source src="/VidEmpresa.MP4" type="video/mp4" />
+            <source src="/VidEmpresa.MP4  " type="video/mp4" />
             Tu navegador no soporta videos HTML5.
           </video>
         </div>
@@ -137,31 +137,31 @@ export default function Empresa() {
           {[
             {
               nombre: "Diego Medina",
-              cargo: "Director de Innovación y Cómputo",
+              cargo: "Director de Innovación y Diseño Web",
               correo: "diego@sonar.mx",
               img: "/Diego.png",
             },
             {
               nombre: "Fernanda Ojeda",
-              cargo: "Gestora de Proyectos Científicos",
+              cargo: "Gestora Técnica de Hardware y Coordinadora de Costos",
               correo: "fernanda@sonar.mx",
               img: "/Fer.png",
             },
             {
               nombre: "Yulemi Nicolai",
-              cargo: "Ingeniera en Análisis Acústico",
+              cargo: "Desarrolladora en Aplicaciones Acústicas y Soluciones de Campo",
               correo: "yulemi@sonar.mx",
               img: "/Yulemi.png",
             },
             {
               nombre: "Keren Villanueva",
-              cargo: "Especialista en Comunicación y Ciencia",
+              cargo: "Especialista en Diseño Gráfico e Identidad Visual",
               correo: "keren@sonar.mx",
               img: "/Keren.jpeg",
             },
             {
               nombre: "Génesis Ariza",
-              cargo: "Desarrolladora de Software Marino",
+              cargo: "Desarrolladora de Sistemas y Analista de Componentes",
               correo: "genesis@sonar.mx",
               img: "/Genesis.png",
             },
