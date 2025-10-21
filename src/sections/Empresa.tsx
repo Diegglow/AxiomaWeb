@@ -107,18 +107,18 @@ export default function Empresa() {
 
         {/* Video */}
         <div className="mt-12 flex justify-center">
-          <video
-            className="rounded-xl shadow-lg border border-slate-700 w-full max-w-4xl"
-            autoPlay
-            loop
-            muted
-            playsInline
-            controls
-          >
-            <source src="/VidEmpresa.MP4  " type="video/mp4" />
-            Tu navegador no soporta videos HTML5.
-          </video>
-        </div>
+          <div className="w-full max-w-4xl aspect-video rounded-xl overflow-hidden shadow-lg border border-slate-700">
+            <iframe
+      className="w-full h-full"
+      src="https://www.youtube.com/embed/Wyjt3sA-Ndy?rel=0&modestbranding=1"
+      title="Muestra Comercial Equipos"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+        ></iframe>
+      </div>
+    </div>
       </section>
 
       {/* EQUIPO */}
