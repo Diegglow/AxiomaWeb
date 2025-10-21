@@ -53,7 +53,7 @@ export default function Componentes() {
           { title: "HDD", spec: "4 X Seagate IronWolf Pro 12TB" },
           { title: "Fuente de poder", spec: "Corsair AX1600i" },
           { title: "Refrigeración", spec: "Enfriamiento líquido (AIO 360mm)" },
-          { title: "Gabinete", spec: "Fractal Define 7XL" },
+          { title: "Carcasa Sonar", spec: "Fractal Define 7XL" },
           { title: "SO", spec: "Embebido" },
           { title: "Pantalla", spec: "Dell UltraSharp 40 Pulgadas 5K2K(U4025QW)" },
           { title: "Teclado", spec: "Keychron K2" },
