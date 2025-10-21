@@ -3,6 +3,7 @@ const links = [
   { href: "#inicio", label: "Inicio" },
   { href: "#empresa", label: "Empresa" },
   { href: "#componentes", label: "Componentes" },
+  { href: "#sistema", label: "Sistema" }, // 🆕 NUEVO ENLACE
   { href: "#aplicaciones", label: "Aplicaciones" },
   { href: "#contacto", label: "Contacto" },
 ];
@@ -18,10 +19,10 @@ const links = [
         alt="Sonar logo"
         class="h-14 w-auto transition-transform duration-300 group-hover:scale-110"
       />
-
+    </a>
 
     <!-- ENLACES -->
-    <ul class="flex items-center gap-8 text-[15px] font-semibold">
+    <ul class="hidden md:flex items-center gap-8 text-[15px] font-semibold">
       {links.map(({ href, label }) => (
         <li>
           <a

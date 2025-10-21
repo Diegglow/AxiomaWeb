@@ -1,45 +1,58 @@
 // src/islands/AppRouter.tsx
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import Home from "../sections/Home";
 import Empresa from "../sections/Empresa";
 import Componentes from "../sections/Componentes";
+import Sistema from "../sections/Sistema"; // 🆕 Importamos la nueva sección
 import Aplicaciones from "../sections/Aplicaciones";
 import Contacto from "../sections/Contacto";
 
-// 🔹 Rutas válidas del sitio
-type RouteKey = "inicio" | "empresa" | "componentes" | "aplicaciones" | "contacto";
+type RouteKey =
+  | "inicio"
+  | "empresa"
+  | "componentes"
+  | "sistema"
+  | "aplicaciones"
+  | "contacto";
 
-// 🔹 Variantes de animación (slide lateral + fade)
 const variants = {
-  initial: { opacity: 0, x: 40 },
+  initial: { opacity: 0, y: 24 },
   animate: {
     opacity: 1,
-    x: 0,
-    transition: { duration: 0.6, ease: "easeOut" as const },
+    y: 0,
+    transition: { duration: 0.5, ease: [0.42, 0, 0.58, 1] }, // easeOut en formato numérico
   },
   exit: {
     opacity: 0,
-    x: -40,
-    transition: { duration: 0.4, ease: "easeIn" as const },
+    y: -24,
+    transition: { duration: 0.35, ease: [0.42, 0, 0.58, 1] }, // easeIn equivalente
   },
-};
+} as const;
 
-// 🔹 Detecta la ruta actual según el hash (#)
 function getRouteFromHash(): RouteKey {
-  const h = (typeof window !== "undefined" ? window.location.hash : "").replace("#", "");
-  if (["empresa", "componentes", "aplicaciones", "contacto", "inicio"].includes(h)) {
+  const h =
+    typeof window !== "undefined"
+      ? window.location.hash.replace("#", "")
+      : "";
+  if (
+    [
+      "inicio",
+      "empresa",
+      "componentes",
+      "sistema",
+      "aplicaciones",
+      "contacto",
+    ].includes(h)
+  )
     return h as RouteKey;
-  }
   return "inicio";
 }
 
-// 🔹 Componente principal del enrutador
 export default function AppRouter() {
   const [route, setRoute] = useState<RouteKey>(getRouteFromHash());
 
-  // Escucha los cambios del hash (por ejemplo #empresa)
   useEffect(() => {
     const onHash = () => {
       const newRoute = getRouteFromHash();
@@ -50,13 +63,14 @@ export default function AppRouter() {
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
-  // Determina qué vista mostrar
   const View = useMemo(() => {
     switch (route) {
       case "empresa":
         return <Empresa />;
       case "componentes":
         return <Componentes />;
+      case "sistema":
+        return <Sistema />; // 🆕 Mostramos la nueva sección
       case "aplicaciones":
         return <Aplicaciones />;
       case "contacto":
@@ -66,7 +80,6 @@ export default function AppRouter() {
     }
   }, [route]);
 
-  // Render con animaciones entre secciones
   return (
     <div className="relative mx-auto max-w-7xl px-4 py-10">
       <AnimatePresence mode="wait">
@@ -76,7 +89,7 @@ export default function AppRouter() {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="w-full bg-slate-950/50 backdrop-blur-md rounded-2xl shadow-lg"
+          className="w-full"
         >
           {View}
         </motion.section>

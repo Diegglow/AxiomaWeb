@@ -36,6 +36,21 @@ export default function Home() {
         </a>
       </motion.section>
 
+    {/* Video */}
+        <div className="mt-12 flex justify-center">
+          <video
+            className="rounded-xl shadow-lg border border-slate-700 w-full max-w-4xl"
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
+          >
+            <source src="/SonarMix.mp4" type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
+        </div>
+
       {/* TARJETAS DE TECNOLOGÍA */}
       <section className="mt-12 relative rounded-2xl overflow-hidden shadow-lg">
         {/* Imagen de fondo */}

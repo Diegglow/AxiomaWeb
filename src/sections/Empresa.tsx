@@ -17,7 +17,7 @@ export default function Empresa() {
               fontFamily: "'Glacial Indifference', 'Nunito Sans', sans-serif",
             }}
           >
-            Agenda Sonar
+            Sobre nosotros...
           </h2>
           <p className="text-slate-200 leading-relaxed">
             En Sonar impulsamos la transformación digital marina mediante el
@@ -29,6 +29,29 @@ export default function Empresa() {
           </p>
         </div>
       </header>
+
+      {/* MISIÓN Y VISIÓN */}
+      <section className="bg-gradient-to-r from-blue-950 to-cyan-900 rounded-xl text-center text-white py-12 px-6 shadow-lg">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          
+          <div>
+            <h3 className="text-2xl font-bold text-cyan-300 mb-3">Misión</h3>
+            <p className="text-slate-200">
+              Desarrollar soluciones de cómputo acústico de alta precisión para
+              analizar y comprender los ecos del océano, aportando información
+              esencial para la ciencia y la conservación marina.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-cyan-300 mb-3">Visión</h3>
+            <p className="text-slate-200">
+              Ser el referente global en innovación acústica aplicada a la
+              investigación marina, liderando la transformación digital de los
+              océanos mediante tecnología y sostenibilidad.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* OBJETIVOS */}
       <section className="text-white text-center">
@@ -92,31 +115,9 @@ export default function Empresa() {
             playsInline
             controls
           >
-            <source src="/Sonar2.mp4" type="video/mp4" />
+            <source src="/VidEmpresa.MP4" type="video/mp4" />
             Tu navegador no soporta videos HTML5.
           </video>
-        </div>
-      </section>
-
-      {/* MISIÓN Y VISIÓN */}
-      <section className="bg-gradient-to-r from-blue-950 to-cyan-900 rounded-xl text-center text-white py-12 px-6 shadow-lg">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h3 className="text-2xl font-bold text-cyan-300 mb-3">Visión</h3>
-            <p className="text-slate-200">
-              Ser el referente global en innovación acústica aplicada a la
-              investigación marina, liderando la transformación digital de los
-              océanos mediante tecnología y sostenibilidad.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-cyan-300 mb-3">Misión</h3>
-            <p className="text-slate-200">
-              Desarrollar soluciones de cómputo acústico de alta precisión para
-              analizar y comprender los ecos del océano, aportando información
-              esencial para la ciencia y la conservación marina.
-            </p>
-          </div>
         </div>
       </section>
 
